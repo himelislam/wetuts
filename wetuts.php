@@ -43,15 +43,17 @@ function wetuts_author_bio($content)
 {
    global $post;
 
+
    $author = get_user_by('id', $post->post_author);
 
    $bio = get_user_meta($author->ID, 'description', true);
    $twitter = get_user_meta($author->ID, 'twitter', true);
    $facebook = get_user_meta($author->ID, 'facebook', true);
    $linkedin = get_user_meta($author->ID, 'linkedin', true);
- ob_start();
+
+   ob_start();
 ?>
-   <div class="wetuts-bio-wrap"> 
+   <div class="wetuts-bio-wrap">
 
       <div class="avatar-image">
          <?php echo get_avatar($author->ID, 64); ?>
@@ -87,8 +89,23 @@ function wetuts_author_bio($content)
 
 add_filter('the_content', 'wetuts_author_bio');
 
-function wetuts_enqueue_scripts(){
+function wetuts_enqueue_scripts()
+{
    wp_enqueue_style('wetuts-style', plugins_url('assets/css/style.css', __FILE__));
 }
 
 add_action('wp_enqueue_scripts', 'wetuts_enqueue_scripts');
+
+
+function wetuts_page_content_top(){
+   echo '<h1>I am at Top</h1>';
+}
+
+add_action('wetuts_page_content_top', 'wetuts_page_content_top');
+
+
+function wetuts_page_content_bottom(){
+   echo '<h1>I am at Bottom</h1>';
+}
+
+add_action('wetuts_page_content_bottom', 'wetuts_page_content_bottom');
