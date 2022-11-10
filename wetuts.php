@@ -109,3 +109,15 @@ function wetuts_page_content_bottom(){
 }
 
 add_action('wetuts_page_content_bottom', 'wetuts_page_content_bottom');
+function wetuts_page_content_top(){
+   echo '<h1>I am at Top</h1>';
+}
+
+add_action('wetuts_page_content_top', 'wetuts_page_content_top');
+
+
+function wetuts_page_content_bottom(){
+   echo '<h1>I am at Bottom</h1>';
+}
+
+add_action('wetuts_page_content_bottom', 'wetuts_page_content_bottom');
