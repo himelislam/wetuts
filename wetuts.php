@@ -18,156 +18,58 @@ if (!defined('ABSPATH')) exit;
 
 function wetuts_contact_form($atts, $content, $shortcode){
    var_dump($atts, $content, $shortcode);
+
+   $atts = shortcode_atts(array(
+         'email'=> get_option('admin_email'),
+         'submit' => __('Send Email', 'wetuts')
+   ), $atts);
+
+   $submit = false;
+
+   if(isset($_POST['wetuts_submit'])){
+      $name = $_POST['wetuts_name'];
+      $email = $_POST['wetuts_email'];
+      $subject = $_POST['wetuts_subject'];
+      $smessage = $_POST['wetuts_message'];   
+
+      $submit = true;
+   }
+   
+   ob_start();
+   ?>
+
+   <?php if($submit){?> 
+      <h1><?php echo _e('Email Sent Successfully', 'wetuts'); ?></h1>
+   <?php } ?>
+   <form>
+      <p>
+         <label for="name">Name</label>
+         <input type="text" name="wetuts_name" id="">
+      </p>
+      <p>
+         <label for="email">Email</label>
+         <input type="email" name="wetuts_email" id="">
+      </p>
+      <p>
+         <label for="subject">Subject</label>
+         <input type="text" name="wetuts_subject" id="">
+      </p>
+      <p>
+         <label for="message">Message</label>
+         <textarea name="wetuts_message" id="message" cols="30" rows="10"></textarea>
+      </p>
+
+      <p>
+         <input type="submit" name="wetuts_submit" value="<?php echo esc_attr($atts['submit']);?>"> 
+      </p>
+   </form>
+   <?php
+
+   return ob_get_clean();
 }
 
 add_shortcode('wetuts_contact', 'wetuts_contact_form');
 
-function wetuts_contact_form($atts, $content, $shortcode){
-   var_dump($atts, $content, $shortcode);
-}
-
-add_shortcode('wetuts_contact', 'wetuts_contact_form');
-
-function wetuts_contact_form($atts, $content, $shortcode){
-   var_dump($atts, $content, $shortcode);
-}
-
-add_shortcode('wetuts_contact', 'wetuts_contact_form');
-function wetuts_contact_form($atts, $content, $shortcode){
-   var_dump($atts, $content, $shortcode);
-}
-
-add_shortcode('wetuts_contact', 'wetuts_contact_form');
-
-function wetuts_contact_form($atts, $content, $shortcode){
-   var_dump($atts, $content, $shortcode);
-}
-
-add_shortcode('wetuts_contact', 'wetuts_contact_form');
-function wetuts_contact_form($atts, $content, $shortcode){
-   var_dump($atts, $content, $shortcode);
-}
-
-add_shortcode('wetuts_contact', 'wetuts_contact_form');
-
-function wetuts_contact_form($atts, $content, $shortcode){
-   var_dump($atts, $content, $shortcode);
-}
-
-add_shortcode('wetuts_contact', 'wetuts_contact_form');
-function wetuts_contact_form($atts, $content, $shortcode){
-   var_dump($atts, $content, $shortcode);
-}
-
-add_shortcode('wetuts_contact', 'wetuts_contact_form');
-
-function wetuts_contact_form($atts, $content, $shortcode){
-   var_dump($atts, $content, $shortcode);
-}
-
-add_shortcode('wetuts_contact', 'wetuts_contact_form');
-function wetuts_contact_form($atts, $content, $shortcode){
-   var_dump($atts, $content, $shortcode);
-}
-
-add_shortcode('wetuts_contact', 'wetuts_contact_form');
-function wetuts_contact_form($atts, $content, $shortcode){
-   var_dump($atts, $content, $shortcode);
-}
-
-add_shortcode('wetuts_contact', 'wetuts_contact_form');
-function wetuts_contact_form($atts, $content, $shortcode){
-   var_dump($atts, $content, $shortcode);
-}
-
-add_shortcode('wetuts_contact', 'wetuts_contact_form');
-function wetuts_contact_form($atts, $content, $shortcode){
-   var_dump($atts, $content, $shortcode);
-}
-
-add_shortcode('wetuts_contact', 'wetuts_contact_form');
-function wetuts_contact_form($atts, $content, $shortcode){
-   var_dump($atts, $content, $shortcode);
-}
-
-add_shortcode('wetuts_contact', 'wetuts_contact_form');
-function wetuts_contact_form($atts, $content, $shortcode){
-   var_dump($atts, $content, $shortcode);
-}
-
-add_shortcode('wetuts_contact', 'wetuts_contact_form');
-function wetuts_contact_form($atts, $content, $shortcode){
-   var_dump($atts, $content, $shortcode);
-}
-
-add_shortcode('wetuts_contact', 'wetuts_contact_form');
-function wetuts_contact_form($atts, $content, $shortcode){
-   var_dump($atts, $content, $shortcode);
-}
-
-add_shortcode('wetuts_contact', 'wetuts_contact_form');
-function wetuts_contact_form($atts, $content, $shortcode){
-   var_dump($atts, $content, $shortcode);
-}
-
-add_shortcode('wetuts_contact', 'wetuts_contact_form');
-function wetuts_contact_form($atts, $content, $shortcode){
-   var_dump($atts, $content, $shortcode);
-}
-
-add_shortcode('wetuts_contact', 'wetuts_contact_form');
-function wetuts_contact_form($atts, $content, $shortcode){
-   var_dump($atts, $content, $shortcode);
-}
-
-add_shortcode('wetuts_contact', 'wetuts_contact_form');
-function wetuts_contact_form($atts, $content, $shortcode){
-   var_dump($atts, $content, $shortcode);
-}
-
-add_shortcode('wetuts_contact', 'wetuts_contact_form');
-function wetuts_contact_form($atts, $content, $shortcode){
-   var_dump($atts, $content, $shortcode);
-}
-
-add_shortcode('wetuts_contact', 'wetuts_contact_form');
-function wetuts_contact_form($atts, $content, $shortcode){
-   var_dump($atts, $content, $shortcode);
-}
-
-add_shortcode('wetuts_contact', 'wetuts_contact_form');
-function wetuts_contact_form($atts, $content, $shortcode){
-   var_dump($atts, $content, $shortcode);
-}
-
-add_shortcode('wetuts_contact', 'wetuts_contact_form');
-function wetuts_contact_form($atts, $content, $shortcode){
-   var_dump($atts, $content, $shortcode);
-}
-
-add_shortcode('wetuts_contact', 'wetuts_contact_form');
-function wetuts_contact_form($atts, $content, $shortcode){
-   var_dump($atts, $content, $shortcode);
-}
-
-add_shortcode('wetuts_contact', 'wetuts_contact_form');
-
-function wetuts_contact_form($atts, $content, $shortcode){
-   var_dump($atts, $content, $shortcode);
-}
-
-add_shortcode('wetuts_contact', 'wetuts_contact_form');
-function wetuts_contact_form($atts, $content, $shortcode){
-   var_dump($atts, $content, $shortcode);
-}
-
-add_shortcode('wetuts_contact', 'wetuts_contact_form');
-
-function wetuts_contact_form($atts, $content, $shortcode){
-   var_dump($atts, $content, $shortcode);
-}
-
-add_shortcode('wetuts_contact', 'wetuts_contact_form');
 
 
 
