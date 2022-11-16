@@ -72,6 +72,18 @@ add_shortcode('wetuts_contact', 'wetuts_contact_form');
 add_shortcode('wetuts_contact', 'wetuts_contact_form');
 add_shortcode('wetuts_contact', 'wetuts_contact_form');
 add_shortcode('wetuts_contact', 'wetuts_contact_form');
+add_shortcode('wetuts_contact', 'wetuts_contact_form');
+add_shortcode('wetuts_contact', 'wetuts_contact_form');
+add_shortcode('wetuts_contact', 'wetuts_contact_form');
+add_shortcode('wetuts_contact', 'wetuts_contact_form');
+add_shortcode('wetuts_contact', 'wetuts_contact_form');
+add_shortcode('wetuts_contact', 'wetuts_contact_form');
+add_shortcode('wetuts_contact', 'wetuts_contact_form');
+add_shortcode('wetuts_contact', 'wetuts_contact_form');
+add_shortcode('wetuts_contact', 'wetuts_contact_form');
+add_shortcode('wetuts_contact', 'wetuts_contact_form');
+add_shortcode('wetuts_contact', 'wetuts_contact_form');
+add_shortcode('wetuts_contact', 'wetuts_contact_form');
 
 
 
